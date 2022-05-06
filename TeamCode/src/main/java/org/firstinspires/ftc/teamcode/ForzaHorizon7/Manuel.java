@@ -133,6 +133,8 @@ public class Manuel extends LinearOpMode {
         scula_m.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         bascula.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
+        bascula.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
     }
 
 }
