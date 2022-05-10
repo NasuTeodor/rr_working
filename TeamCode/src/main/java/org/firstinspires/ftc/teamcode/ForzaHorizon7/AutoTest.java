@@ -54,6 +54,7 @@ public class AutoTest extends LinearOpMode {
 
         drive.setPoseEstimate(pose);
 
+        while(pipeline.gasesteMarker() == 0){}
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
         if(pozitie == 1)
@@ -93,9 +94,7 @@ public class AutoTest extends LinearOpMode {
         drive.followTrajectorySequence(start2hub);
 
         time.reset();
-        double distanta = drive.sensor_distanta();
-
-        while(time.seconds() <= 2 && distanta>=9){
+        while(time.seconds() <= 2 && drive.sensor_distanta()>=9){
             drive.putere(-.1, -.1, -.1, -.1);
         }
 
@@ -112,14 +111,12 @@ public class AutoTest extends LinearOpMode {
 
         drive.followTrajectorySequence(depozit2start);
 
-        pose = drive.getPoseEstimate();
-
-        TrajectorySequence start2hub2 = drive.trajectorySequenceBuilder( pose )
+        TrajectorySequence start2hub2 = drive.trajectorySequenceBuilder( drive.getPoseEstimate())
                 .addDisplacementMarker( () ->{
                     drive.scula_power(1);
                 })
                 .lineToLinearHeading( variabile.hub)
-                .addTemporalMarker( timp_ridicare-1, ()->{
+                .addTemporalMarker( timp_ridicare, ()->{
                     drive.scula_power(0);
                     drive.arunca();
                 })
@@ -140,9 +137,7 @@ public class AutoTest extends LinearOpMode {
         drive.followTrajectorySequence(start2hub2);
 
         time.reset();
-        distanta = drive.sensor_distanta();
-
-        while(time.seconds() <= 2 && distanta>=9){
+        while(time.seconds() <= 2 && drive.sensor_distanta()>=9){
             drive.putere(-.1, -.1, -.1, -.1);
         }
 
