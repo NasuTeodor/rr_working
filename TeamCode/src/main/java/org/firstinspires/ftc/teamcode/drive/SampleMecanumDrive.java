@@ -214,7 +214,7 @@ public class SampleMecanumDrive extends MecanumDrive {
     public void arunca(){ cuva.setPosition(variabile.drop_cuva); }
     public void retrage_cuva(){ cuva.setPosition(variabile.default_cuva); }
 
-    public void betie_rata(){ roata.setPower(roata_power); }
+    public void betie_rata(double direction){ roata.setPower(roata_power*direction); }
     public void stop_rata(){ roata.setPower(0); }
 
     public void absoarbe(){ absorbtie.setPower(absorbtie_power); }

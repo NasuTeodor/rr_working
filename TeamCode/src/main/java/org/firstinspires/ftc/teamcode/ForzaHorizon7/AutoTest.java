@@ -50,11 +50,6 @@ public class AutoTest extends LinearOpMode {
             }
         });
 
-        waitForStart();
-
-        drive.setPoseEstimate(pose);
-
-        while(pipeline.gasesteMarker() == 0){}
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
         if(pozitie == 1)
@@ -65,6 +60,12 @@ public class AutoTest extends LinearOpMode {
 
         telemetry.addData("pozitie:", String.valueOf(pozitie));
         telemetry.update();
+
+        waitForStart();
+
+        drive.setPoseEstimate(pose);
+
+//        while(pipeline.gasesteMarker() == 0){}
 
         TrajectorySequence start2hub = drive.trajectorySequenceBuilder( pose )
                 .addDisplacementMarker( () ->{
@@ -116,7 +117,7 @@ public class AutoTest extends LinearOpMode {
                     drive.scula_power(1);
                 })
                 .lineToLinearHeading( variabile.hub)
-                .addTemporalMarker( timp_ridicare, ()->{
+                .addTemporalMarker( timp_ridicare-1, ()->{
                     drive.scula_power(0);
                     drive.arunca();
                 })
@@ -146,7 +147,7 @@ public class AutoTest extends LinearOpMode {
                     drive.scuipa();
                 })
                 .lineTo(variabile.depozit)
-                .strafeTo(variabile.depozit_penultim)
+//                .strafeTo(variabile.depozit_penultim)
                 .splineToLinearHeading(variabile.start_spreHouse_realinie, Math.toRadians(90))
                 .addTemporalMarker( 1.7, ()->{
                     drive.stai_absorbtie();
