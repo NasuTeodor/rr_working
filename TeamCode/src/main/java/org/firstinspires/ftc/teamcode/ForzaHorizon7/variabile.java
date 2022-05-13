@@ -23,6 +23,17 @@ public class variabile {
     public static double timp_coborare_centru = .725/2;
     public static double timp_coborare_jos = .725/3;
 
+    //sa ma fut in milisecundele vietii ca imi vine sa mor
+    //cine citeste asta imi mananca pula
+
+
+    //   / \   / \
+    //  (  *   *  )   -"da coaie beau samniuta"
+    //   \-------/
+    //   / | | \
+    //  / |   | \
+    //  _|  "  |_
+
 //    public static TrajectoryVelocityConstraint depozit_velConstrain = .5;
 
     public static Pose2d hub = new Pose2d( 22, 25, Math.toRadians(0)); //y 25
@@ -46,9 +57,13 @@ public class variabile {
     public static Vector2d parcare_rataVector = new Vector2d(20, 57.2+20);
 
 
+    //sa imi bag pula in ciocanel scriu asta ca nu am ce dracu sa scriu astea 15 minute cat astept
+    //te rog doar vreau sa mor
+    //cine pula mea spala canile in care pui acelasi lucru
+    //ma ce buna este o cafea cu un alexandrion
     //CEALALTA
     public static Pose2d hubOPUS = new Pose2d( 22, -25, Math.toRadians(0)); //y 25
-    public static Vector2d hub_vectorOPUS = new Vector2d( 23, -25);
+    public static Vector2d hub_vectorOPUS = new Vector2d( 30, -25);
     public static Pose2d hub_rataOPUS = new Pose2d( 22+ 15.5, -48, Math.toRadians(90));
     public static Vector2d hub_rataVectorOPUS = new Vector2d( 22+9, -23-6);
     public static Pose2d startOPUS = new Pose2d( 0, 0, Math.toRadians(0));
