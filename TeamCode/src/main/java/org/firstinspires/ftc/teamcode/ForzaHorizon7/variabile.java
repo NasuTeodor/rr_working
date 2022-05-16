@@ -26,7 +26,7 @@ public class variabile {
     //sa ma fut in milisecundele vietii ca imi vine sa mor
     //cine citeste asta imi mananca pula
 
-
+    //    _     _
     //   / \   / \
     //  (  *   *  )   -"da coaie beau samniuta"
     //   \-------/
@@ -61,6 +61,8 @@ public class variabile {
     //te rog doar vreau sa mor
     //cine pula mea spala canile in care pui acelasi lucru
     //ma ce buna este o cafea cu un alexandrion
+
+    //SA IMI BAG PULA IN CIOCANEL SI 
     //CEALALTA
     public static Pose2d hubOPUS = new Pose2d( 22, -25, Math.toRadians(0)); //y 25
     public static Vector2d hub_vectorOPUS = new Vector2d( 30, -25);
