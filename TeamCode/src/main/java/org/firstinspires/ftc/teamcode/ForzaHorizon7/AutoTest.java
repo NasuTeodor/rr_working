@@ -50,6 +50,10 @@ public class AutoTest extends LinearOpMode {
             }
         });
 
+        time.reset();
+        //VEZI CA AI SI TIMER
+        while(pipeline.gasesteMarker() == 0 || time.seconds() <= 2)
+        { }
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
         if(pozitie == 1)
