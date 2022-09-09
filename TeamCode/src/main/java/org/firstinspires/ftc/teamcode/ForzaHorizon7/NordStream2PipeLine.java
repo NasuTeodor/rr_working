@@ -13,6 +13,8 @@ import org.openftc.easyopencv.OpenCvPipeline;
 @Config
 public class NordStream2PipeLine extends OpenCvPipeline {
 
+    //make things faster DIPSHIT
+
     Rect LeftROI = new Rect(
             new Point(0,60),
             new Point(100 ,160)

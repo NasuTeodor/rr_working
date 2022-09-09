@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.ForzaHorizon7;
 
 import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.trajectory.Trajectory;
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -20,6 +21,8 @@ public class AutoTest extends LinearOpMode {
     SampleMecanumDrive drive;
 
     private ElapsedTime time = new ElapsedTime();
+
+    //diff for diff test
 
     public static double FRONTAL_MULTIPLIER = 0.951254565; // DIPSHIT
     public static double LATERAL_MULTIPLIER = 1;
@@ -50,6 +53,8 @@ public class AutoTest extends LinearOpMode {
             }
         });
 
+        //modificare ampulea
+        while(pipeline.gasesteMarker() == 0){}
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
         if(pozitie == 1)
@@ -149,7 +154,7 @@ public class AutoTest extends LinearOpMode {
                 .lineTo(variabile.depozit)
 //                .strafeTo(variabile.depozit_penultim)
                 .splineToLinearHeading(variabile.start_spreHouse_realinie, Math.toRadians(90))
-                .addTemporalMarker( 1.7, ()->{
+                .addTemporalMarker( 1.7,  ()->{ //DO NOT FUCKING ADD AN OFFSET AGAIN YOU FUCKING PIECE OF SHIT
                     drive.stai_absorbtie();
                 })
                 .build();

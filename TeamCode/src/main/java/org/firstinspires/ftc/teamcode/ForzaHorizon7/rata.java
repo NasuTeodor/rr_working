@@ -25,6 +25,8 @@ public class rata extends LinearOpMode {
 
         waitForStart();
 
+        //REMOVE LAST TRAJ SEQUENCE
+
         TrajectorySequence start2rata = drive.trajectorySequenceBuilder( pose )
                 .lineTo( variabile.rata_vector )
                 .addDisplacementMarker( ()->{

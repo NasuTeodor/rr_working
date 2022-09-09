@@ -3,8 +3,6 @@ package org.firstinspires.ftc.teamcode.ForzaHorizon7;
 import com.acmerobotics.dashboard.config.Config;
 import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.geometry.Vector2d;
-import com.acmerobotics.roadrunner.trajectory.constraints.TrajectoryVelocityConstraint;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @Config
 public class variabile {
@@ -62,7 +60,7 @@ public class variabile {
     //cine pula mea spala canile in care pui acelasi lucru
     //ma ce buna este o cafea cu un alexandrion
 
-    //SA IMI BAG PULA IN CIOCANEL SI 
+    //SA IMI BAG PULA IN CIOCANEL SI IN VIATA
     //CEALALTA
     public static Pose2d hubOPUS = new Pose2d( 22, -25, Math.toRadians(0)); //y 25
     public static Vector2d hub_vectorOPUS = new Vector2d( 30, -25);
@@ -80,6 +78,9 @@ public class variabile {
     public static Pose2d rataOPUS = new Pose2d(5,-57.2-22, Math.toRadians(60));
     public static Pose2d rata_aproapeOPUS = new Pose2d(5, -57.2-18, Math.toRadians(40));
     public static Vector2d rata_vectorOPUS = new Vector2d( 3, -57.2-23.6);
+
+    public static String viata = "ma cam indoiesc";
+    //tot trec astia pe hol si trebuie sa scriu rasa lor
 
     public static Vector2d parcare_ratePunctSafeOPUS = new Vector2d(35, -57.2-15);
     public static Pose2d parcare_rataOPUS = new Pose2d( 12, -57.2-33.6, Math.toRadians(90));

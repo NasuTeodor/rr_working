@@ -4,6 +4,7 @@ import com.acmerobotics.dashboard.FtcDashboard;
 import com.acmerobotics.dashboard.telemetry.MultipleTelemetry;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.openftc.easyopencv.OpenCvCamera;
@@ -22,6 +23,8 @@ public class Detectie extends LinearOpMode {
     public void runOpMode() {
 
         OpenCvCamera camera; // = OpenCvCameraFactory.getInstance().createInternalCamera(OpenCvInternalCamera.CameraDirection.BACK, cameraMonitorViewId);
+
+        ElapsedTime timer = new ElapsedTime();
 
         int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
         camera = OpenCvCameraFactory.getInstance().createWebcam(hardwareMap.get(WebcamName.class, "Webcam 1"), cameraMonitorViewId);
@@ -46,12 +49,19 @@ public class Detectie extends LinearOpMode {
 
         waitForStart();
 
-        while(opModeIsActive()){
+        timer.reset();
+
+
+
+//        while(opModeIsActive()){
 
         FtcDashboard dashboard = FtcDashboard.getInstance();
         telemetry = new MultipleTelemetry(telemetry, dashboard.getTelemetry());
         FtcDashboard.getInstance().startCameraStream(camera, 0);
 
+        while(pipeline.gasesteMarker() == 0){}
+        telemetry.addData( "timp necesar:", String.valueOf(timer.seconds()));
+        telemetry.addData( "timp necesar (ms):", String.valueOf(timer.milliseconds()));
         int pozitie = pipeline.gasesteMarker();
         String pos = Integer.toString(pozitie);
         telemetry.addData("Locatie:", pos);
@@ -59,7 +69,7 @@ public class Detectie extends LinearOpMode {
         telemetry.addData("Sa imi bag", "daca merge beau");
         telemetry.update();
 
-    }
+//    }
 
     }
 
