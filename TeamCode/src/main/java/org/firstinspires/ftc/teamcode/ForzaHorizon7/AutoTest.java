@@ -53,7 +53,7 @@ public class AutoTest extends LinearOpMode {
             }
         });
 
-        //modificare ampulea
+        //modificare
         while(pipeline.gasesteMarker() == 0){}
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
@@ -187,7 +187,7 @@ public class AutoTest extends LinearOpMode {
     }
 
     //functie care returneaza distanta corecta cu tot cu multiplier ca face undershoot
-    //si ampulea trebuie facuta si pentru frontal si lateral separat // have fun at strafes DIPSHIT
+    //si trebuie facuta si pentru frontal si lateral separat // have fun DIPSHIT
 
     double repair_frontal (double distance){ return distance*FRONTAL_MULTIPLIER; }
 

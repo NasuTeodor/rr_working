@@ -50,6 +50,8 @@ public class AutoTestOPUS extends LinearOpMode {
             }
         });
 
+
+        //wrong foloseste while pipeline.gasesteMarker
         int pozitie = pipeline.gasesteMarker();
         double timp_ridicare;
         if(pozitie == 1)
@@ -182,7 +184,7 @@ public class AutoTestOPUS extends LinearOpMode {
     }
 
     //functie care returneaza distanta corecta cu tot cu multiplier ca face undershoot
-    //si ampulea trebuie facuta si pentru frontal si lateral separat // have fun at strafes DIPSHIT
+    //si trebuie facuta si pentru frontal si lateral separat // have fun at DIPSHIT
 
     double repair_frontal (double distance){ return distance*FRONTAL_MULTIPLIER; }
 

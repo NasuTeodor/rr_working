@@ -21,16 +21,16 @@ public class variabile {
     public static double timp_coborare_centru = .725/2;
     public static double timp_coborare_jos = .725/3;
 
-    //sa ma fut in milisecundele vietii ca imi vine sa mor
-    //cine citeste asta imi mananca pula
+    //ador milisescundele
+    //cine citeste asta are nevoie de ajutor
 
-    //    _     _
-    //   / \   / \
-    //  (  *   *  )   -"da coaie beau samniuta"
-    //   \-------/
+    //   _     _
+    //  / \   / \
+    // (  *   *  )   -"da beau samniuta"
+    //  \-------/
     //   / | | \
     //  / |   | \
-    //  _|  "  |_
+    //  _|     |_
 
 //    public static TrajectoryVelocityConstraint depozit_velConstrain = .5;
 
@@ -55,12 +55,10 @@ public class variabile {
     public static Vector2d parcare_rataVector = new Vector2d(20, 57.2+20);
 
 
-    //sa imi bag pula in ciocanel scriu asta ca nu am ce dracu sa scriu astea 15 minute cat astept
-    //te rog doar vreau sa mor
-    //cine pula mea spala canile in care pui acelasi lucru
-    //ma ce buna este o cafea cu un alexandrion
+    //cum inca nu am murit de foame
+    //cine spala canile in care pui acelasi lucru
+    //reteta cafea thobor foame + cafea + ingredient special
 
-    //SA IMI BAG PULA IN CIOCANEL SI IN VIATA
     //CEALALTA
     public static Pose2d hubOPUS = new Pose2d( 22, -25, Math.toRadians(0)); //y 25
     public static Vector2d hub_vectorOPUS = new Vector2d( 30, -25);
@@ -80,7 +78,7 @@ public class variabile {
     public static Vector2d rata_vectorOPUS = new Vector2d( 3, -57.2-23.6);
 
     public static String viata = "ma cam indoiesc";
-    //tot trec astia pe hol si trebuie sa scriu rasa lor
+    //tot trec astia pe hol si trebuie sa scriu aici
 
     public static Vector2d parcare_ratePunctSafeOPUS = new Vector2d(35, -57.2-15);
     public static Pose2d parcare_rataOPUS = new Pose2d( 12, -57.2-33.6, Math.toRadians(90));
